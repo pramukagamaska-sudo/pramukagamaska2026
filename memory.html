@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory - Dewan Ambalan Gamaska</title>
+  <style>
+    :root { --cream: #fff8e9; --gold: #f5c542; --forest: #102b20; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--cream); font-family: Arial, sans-serif; background: var(--forest); }
+    .page { min-height: 100vh; padding: 0; background: linear-gradient(rgba(8, 29, 19, .82), rgba(8, 29, 19, .92)), url("WhatsApp Image 2026-08-22 at 19.47.26.jpeg") center / cover fixed; }
+    header { position: relative; z-index: 2; display: flex; max-width: none; margin: 0 4px 2px; align-items: center; justify-content: space-between; gap: 20px; }
+    h1 { margin: 0; color: var(--gold); font: 700 clamp(30px, 5vw, 58px)/.95 Georgia, serif; letter-spacing: .08em; }
+    .back { color: var(--cream); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; width: min(1280px, calc(100vw - 34px)); margin: 8px auto 34px; align-items: start; }
+    .photo { position: relative; display: block; min-width: 0; margin: 0; overflow: hidden; border: 5px solid rgba(255, 248, 233, .92); border-radius: 16px; background: linear-gradient(180deg, #1e4d3d, #15342b); box-shadow: 0 16px 28px rgba(0, 0, 0, .18), inset 0 0 0 1px rgba(255,255,255,.12); cursor: pointer; aspect-ratio: 4 / 3; }
+    .photo img { display: block; width: 100%; height: 100%; object-fit: cover; content-visibility: auto; }
+    .caption { position: absolute; right: 0; bottom: 0; left: 0; padding: 12px 14px; color: var(--cream); background: linear-gradient(transparent, rgba(8, 29, 19, .8)); font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .lightbox-download { position: absolute; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: none; border-radius: 50%; font-size: 18px; font-weight: 700; text-decoration: none; color: #102b20; background: rgba(255,255,255,.92); box-shadow: 0 10px 20px rgba(0,0,0,.18); cursor: pointer; transition: transform .2s ease, opacity .2s ease; top: 14px; right: 14px; }
+    .lightbox-download:hover { transform: translateY(-1px); }
+    .lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(6, 15, 12, .82); backdrop-filter: blur(4px); z-index: 999; padding: 24px; }
+    .lightbox.open { display: flex; animation: fadeIn .22s ease; }
+    .audio-player { display: block; width: min(420px, calc(100vw - 28px)); margin: 12px auto 0; border-radius: 12px; background: rgba(8, 29, 19, .7); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .lightbox-inner { position: relative; max-width: min(90vw, 980px); width: 100%; padding: 16px; border-radius: 18px; background: rgba(18, 34, 28, .9); box-shadow: 0 20px 60px rgba(0,0,0,.42); border: 1px solid rgba(255,255,255,.08); }
+    .lightbox img { display: block; width: 100%; max-height: 82vh; object-fit: contain; border-radius: 12px; background: #000; border: 1px solid rgba(255,255,255,.12); }
+    .lightbox-close, .lightbox-prev, .lightbox-next { position: absolute; width: 42px; height: 42px; border: none; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: #fff; background: rgba(255,255,255,.12); box-shadow: 0 10px 20px rgba(0,0,0,.16); transition: transform .2s ease, background .2s ease; }
+    .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { transform: scale(1.04); background: rgba(255,255,255,.18); }
+    .lightbox-close { top: -12px; right: -12px; font-size: 26px; line-height: 1; }
+    .lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); font-size: 28px; }
+    .lightbox-prev { left: -16px; }
+    .lightbox-next { right: -16px; }
+    @media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { header { align-items: flex-start; flex-direction: column; margin: 0 12px 10px; } .gallery { grid-template-columns: minmax(0, 1fr); width: calc(100vw - 26px); gap: 12px; } .photo img { height: 220px; } .caption { padding: 10px; font-size: 9px; } .lightbox { padding: 18px; } .lightbox-inner { padding: 10px; } .lightbox-prev, .lightbox-next { width: 38px; height: 38px; } }
+  </style>
+</head>
+<body>
+  <audio id="page-music" class="audio-player" autoplay loop preload="auto" controls>
+    <source src="ssstik.io_1787592804098.mp3" type="audio/mpeg">
+  </audio>
+  <main class="page">
+    <header><h1>MEMORY</h1><a class="back" href="menu.html">Kembali ke menu</a></header>
+    <section class="gallery" aria-label="Galeri memory kegiatan Gamaska">
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 19.47.26.jpeg" alt="Dewan Ambalan Gamaska bersama-sama"><figcaption class="caption">Gamaska 2026</figcaption></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 19.47.27.jpeg" alt="Kegiatan lapangan Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 19.51.29.jpeg" alt="Aktivitas anggota Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 19.51.30.jpeg" alt="Kegiatan pramuka Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 19.51.35.jpeg" alt="Kegiatan lapangan organisasi"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.45.jpeg" alt="Kegiatan Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.48.jpeg" alt="Kebersamaan Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.50.jpeg" alt="Dokumentasi kegiatan ambalan"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.53.jpeg" alt="Kegiatan anggota ambalan"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.54.jpeg" alt="Aktivitas bersama anggota"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.55.jpeg" alt="Perjalanan Dewan Ambalan"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.02.57.jpeg" alt="Kegiatan Dewan Ambalan Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.05.09 (1).jpeg" alt="Kegiatan bersama Gamaska"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.20.15.jpeg" alt="Foto kegiatan tambahan 1"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.20.44.jpeg" alt="Foto kegiatan tambahan 2"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.21.15.jpeg" alt="Foto kegiatan tambahan 3"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.22.09.jpeg" alt="Foto kegiatan tambahan 4"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.22.10.jpeg" alt="Foto kegiatan tambahan 5"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.22.17.jpeg" alt="Foto kegiatan tambahan 6"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.22.21.jpeg" alt="Foto kegiatan tambahan 7"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.26.19.jpeg" alt="Foto kegiatan tambahan 8"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.27.20.jpeg" alt="Foto kegiatan tambahan 9"></figure>
+      <figure class="photo"><img src="WhatsApp Image 2026-08-22 at 20.27.26.jpeg" alt="Foto kegiatan tambahan 10"></figure>
+      <figure class="photo"><img src="_MG_0036.JPG" alt="Foto tambahan 1"></figure>
+      <figure class="photo"><img src="_MG_0052.JPG" alt="Foto tambahan 2"></figure>
+      <figure class="photo"><img src="_MG_0069.JPG" alt="Foto tambahan 3"></figure>
+      <figure class="photo"><img src="_MG_0081.JPG" alt="Foto tambahan 4"></figure>
+      <figure class="photo"><img src="_MG_0087.JPG" alt="Foto tambahan 5"></figure>
+      <figure class="photo"><img src="_MG_0095.JPG" alt="Foto tambahan 6"></figure>
+      <figure class="photo"><img src="_MG_0099.JPG" alt="Foto tambahan 7"></figure>
+      <figure class="photo"><img src="_MG_0103.JPG" alt="Foto tambahan 8"></figure>
+      <figure class="photo"><img src="_MG_0105.JPG" alt="Foto tambahan 9"></figure>
+      <figure class="photo"><img src="_MG_0106.JPG" alt="Foto tambahan 10"></figure>
+      <figure class="photo"><img src="_MG_0114.JPG" alt="Foto tambahan 11"></figure>
+      <figure class="photo"><img src="_MG_0120 (1).JPG" alt="Foto tambahan 12"></figure>
+      <figure class="photo"><img src="_MG_0312.JPG" alt="Foto tambahan 13"></figure>
+      <figure class="photo"><img src="_MG_0336.JPG" alt="Foto tambahan 14"></figure>
+      <figure class="photo"><img src="_MG_0367.JPG" alt="Foto tambahan 15"></figure>
+      <figure class="photo"><img src="_MG_0371.JPG" alt="Foto tambahan 16"></figure>
+      <figure class="photo"><img src="_MG_0377.JPG" alt="Foto tambahan 17"></figure>
+      <figure class="photo"><img src="_MG_0401.JPG" alt="Foto tambahan 18"></figure>
+      <figure class="photo"><img src="_MG_0404.JPG" alt="Foto tambahan 19"></figure>
+      <figure class="photo"><img src="_MG_0411.JPG" alt="Foto tambahan 20"></figure>
+    </section>
+  </main>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Tutup foto">×</button>
+      <button class="lightbox-prev" aria-label="Foto sebelumnya">‹</button>
+      <button class="lightbox-next" aria-label="Foto berikutnya">›</button>
+      <button class="lightbox-download" aria-label="Unduh foto">↓</button>
+      <img id="lightbox-img" src="" alt="Foto diperbesar" />
+    </div>
+  </div>
+  <script>
+    const pageMusic = document.getElementById('page-music');
+    const tryPlayMusic = () => {
+      if (pageMusic && typeof pageMusic.play === 'function') {
+        pageMusic.play().catch(() => {});
+      }
+    };
+    document.addEventListener('pointerdown', tryPlayMusic, { once: true });
+    document.addEventListener('keydown', tryPlayMusic, { once: true });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    const downloadBtn = document.querySelector('.lightbox-download');
+    const figures = Array.from(document.querySelectorAll('.photo'));
+    const images = figures.map((figure) => figure.querySelector('img'));
+    let currentIndex = 0;
+
+    images.forEach((image, index) => {
+      image.decoding = 'async';
+      if (index > 3) image.loading = 'lazy';
+    });
+
+    const openLightbox = (index) => {
+      currentIndex = index;
+      const img = images[currentIndex];
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    };
+
+    const showPrev = () => {
+      const next = (currentIndex - 1 + images.length) % images.length;
+      openLightbox(next);
+    };
+
+    const showNext = () => {
+      const next = (currentIndex + 1) % images.length;
+      openLightbox(next);
+    };
+
+    const triggerDownload = () => {
+      const currentImg = images[currentIndex];
+      const link = document.createElement('a');
+      link.href = currentImg.src;
+      link.download = currentImg.getAttribute('src').split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    };
+
+    figures.forEach((figure, index) => {
+      figure.addEventListener('click', () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+    downloadBtn.addEventListener('click', triggerDownload);
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') showPrev();
+      if (event.key === 'ArrowRight') showNext();
+      if (event.key.toLowerCase() === 'd') triggerDownload();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anggota - Dewan Ambalan Gamaska</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { --cream: #fff8e9; --gold: #f5c542; --forest: #102b20; --leaf: #1e4d3d; }
+    body { margin: 0; min-height: 100vh; color: var(--cream); font-family: Arial, sans-serif; background: var(--forest) url("WhatsApp Image 2026-08-22 at 19.47.26.jpeg") center / cover fixed; }
+    .page { min-height: 100vh; padding: 28px 18px 48px; background: rgba(8, 29, 19, .78); }
+    .header { display: flex; width: min(1180px, 100%); margin: 0 auto 32px; align-items: end; justify-content: space-between; gap: 20px; }
+    h1 { margin: 0; color: var(--gold); font: 700 clamp(42px, 8vw, 82px)/.95 Georgia, serif; letter-spacing: .05em; }
+    .intro { margin: 8px 0 0; color: rgba(255, 248, 233, .78); font-size: 15px; }
+    .back { flex: 0 0 auto; }
+    .member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; width: min(1180px, 100%); margin: 0 auto; }
+    .division { grid-column: 1 / -1; margin: 18px 0 0; padding-bottom: 8px; border-bottom: 1px solid rgba(245, 197, 66, .7); color: var(--gold); font-size: 14px; letter-spacing: .16em; text-transform: uppercase; }
+    .member-card { display: grid; grid-template-columns: 92px 1fr; min-height: 132px; gap: 14px; align-items: center; padding: 14px; border: 1px solid rgba(255, 248, 233, .32); background: rgba(16, 43, 32, .72); box-shadow: 0 10px 22px rgba(0, 0, 0, .18); }
+    .photo-space { display: grid; width: 92px; height: 104px; place-items: center; overflow: hidden; border-bottom: 3px solid #fff; background: rgba(255, 248, 233, .08); color: rgba(255, 248, 233, .7); font-size: 10px; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
+    .photo-space img { width: 100%; height: 100%; border: 2px solid #fff; object-fit: cover; object-position: center; }
+    .member-name { margin: 0 0 8px; color: var(--cream); font-size: 16px; line-height: 1.3; }
+    .member-role { margin: 0; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    @media (max-width: 640px) { .page { padding: 22px 12px 34px; } .header { align-items: flex-start; flex-direction: column; margin-bottom: 24px; } .member-grid { grid-template-columns: 1fr; gap: 12px; } .division { margin-top: 14px; } }
+    a { color: #f5c542; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <audio id="page-music" autoplay loop preload="auto">
+    <source src="ssstik.io_1787592804098.mp3" type="audio/mpeg">
+  </audio>
+  <main class="page">
+    <header class="header">
+      <div><h1>ANGGOTA</h1><p class="intro">Dewan Ambalan Gamaska 2026</p></div>
+      <a class="back" href="menu.html">Kembali ke menu</a>
+    </header>
+    <section class="member-grid" aria-label="Daftar anggota Dewan Ambalan Gamaska">
+      <h2 class="division">Pradana</h2>
+      <article class="member-card"><div class="photo-space"><img src="1(1).png" alt="Rizky Farrel Chairu Akfiady"></div><div><h3 class="member-name">Rizky Farrel Chairu Akfiady</h3><p class="member-role">Pradana</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="2(1).png" alt="Anisatul Azizah"></div><div><h3 class="member-name">Anisatul Azizah</h3><p class="member-role">Pradana</p></div></article>
+
+      <h2 class="division">Juru Adat</h2>
+      <article class="member-card"><div class="photo-space"><img src="3(1).png" alt="M. Cakra Pandu Sukma Perwira"></div><div><h3 class="member-name">M. Cakra Pandu Sukma Perwira</h3><p class="member-role">Juru Adat</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="4(1).png" alt="Ririn Puspita Ningrum"></div><div><h3 class="member-name">Ririn Puspita Ningrum</h3><p class="member-role">Juru Adat</p></div></article>
+
+      <h2 class="division">Kerani</h2>
+      <article class="member-card"><div class="photo-space"><img src="5.png" alt="Ikanur Latifah"></div><div><h3 class="member-name">Ikanur Latifah</h3><p class="member-role">Kerani</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="6.png" alt="Nur Azizah"></div><div><h3 class="member-name">Nur Azizah</h3><p class="member-role">Kerani</p></div></article>
+
+      <h2 class="division">Juru Uang</h2>
+      <article class="member-card"><div class="photo-space"><img src="7.png" alt="Safira Aulia Oktaviana"></div><div><h3 class="member-name">Safira Aulia Oktaviana</h3><p class="member-role">Juru Uang</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="8.png" alt="Riska Maulaa"></div><div><h3 class="member-name">Riska Maulaa</h3><p class="member-role">Juru Uang</p></div></article>
+
+      <h2 class="division">Sie Humas</h2>
+      <article class="member-card"><div class="photo-space"><img src="9.png" alt="M. Hafid Dliyaul Khaq"></div><div><h3 class="member-name">M. Hafid Dliyaul Khaq</h3><p class="member-role">Sie Humas</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="10.png" alt="Safira Dwi Juliani"></div><div><h3 class="member-name">Safira Dwi Juliani</h3><p class="member-role">Sie Humas</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="11.png" alt="Rulita Amel Pratiwi"></div><div><h3 class="member-name">Rulita Amel Pratiwi</h3><p class="member-role">Sie Humas</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="12.png" alt="M. Lusiano Yusuf Adnan"></div><div><h3 class="member-name">M. Lusiano Yusuf Adnan</h3><p class="member-role">Sie Humas</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="13.png" alt="Fara Tri Adelia"></div><div><h3 class="member-name">Fara Tri Adelia</h3><p class="member-role">Sie Humas</p></div></article>
+
+      <h2 class="division">Sie Tekpram</h2>
+      <article class="member-card"><div class="photo-space"><img src="14.png" alt="Marcello Maulana Ibrahim"></div><div><h3 class="member-name">Marcello Maulana Ibrahim</h3><p class="member-role">Sie Tekpram</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="15.png" alt="M. Hafit Islakhul Ula"></div><div><h3 class="member-name">M. Hafit Islakhul Ula</h3><p class="member-role">Sie Tekpram</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="16.png" alt="Abdul Ghofur"></div><div><h3 class="member-name">Abdul Ghofur</h3><p class="member-role">Sie Tekpram</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="17.png" alt="Salimatul Faizah"></div><div><h3 class="member-name">Salimatul Faizah</h3><p class="member-role">Sie Tekpram</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="18.png" alt="Meyza Aufaa Syahda"></div><div><h3 class="member-name">Meyza Aufaa Syahda</h3><p class="member-role">Sie Tekpram</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="19.png" alt="Deswita Tunafsiyah"></div><div><h3 class="member-name">Deswita Tunafsiyah</h3><p class="member-role">Sie Tekpram</p></div></article>
+
+      <h2 class="division">Sie Litbang</h2>
+      <article class="member-card"><div class="photo-space"><img src="20.png" alt="Karimatul Khilda"></div><div><h3 class="member-name">Karimatul Khilda</h3><p class="member-role">Sie Litbang</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="21.png" alt="Diana Sweet Malaya"></div><div><h3 class="member-name">Diana Sweet Malaya</h3><p class="member-role">Sie Litbang</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="22.png" alt="Najwa Eka Amelia"></div><div><h3 class="member-name">Najwa Eka Amelia</h3><p class="member-role">Sie Litbang</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="23.png" alt="Rohmansyah Ajifyunizar"></div><div><h3 class="member-name">Rohmansyah Ajifyunizar</h3><p class="member-role">Sie Litbang</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="24.png" alt="M. Ikhsan"></div><div><h3 class="member-name">M. Ikhsan</h3><p class="member-role">Sie Litbang</p></div></article>
+
+      <h2 class="division">Sie Logistik</h2>
+      <article class="member-card"><div class="photo-space"><img src="25.png" alt="Kholifatul Lutfi Zazkia"></div><div><h3 class="member-name">Kholifatul Lutfi Zazkia</h3><p class="member-role">Sie Logistik</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="26.png" alt="M. Hafi Abdul Ghofur"></div><div><h3 class="member-name">M. Hafi Abdul Ghofur</h3><p class="member-role">Sie Logistik</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="27.png" alt="Nila Laylatul Karimah"></div><div><h3 class="member-name">Nila Laylatul Karimah</h3><p class="member-role">Sie Logistik</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="28.png" alt="Gede Surya Wijaya Atmaja"></div><div><h3 class="member-name">Gede Surya Wijaya Atmaja</h3><p class="member-role">Sie Logistik</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="29.png" alt="Pandu Rif'at Gardapati"></div><div><h3 class="member-name">Pandu Rif'at Gardapati</h3><p class="member-role">Sie Logistik</p></div></article>
+
+      <h2 class="division">Sie Tik</h2>
+      <article class="member-card"><div class="photo-space"><img src="30.png" alt="Mukhammad Muzaqqi"></div><div><h3 class="member-name">M. Muzaqqi</h3><p class="member-role">Sie Tik</p></div></article>
+      <article class="member-card"><div class="photo-space"><img src="31.png" alt="Ainun Aisiyah"></div><div><h3 class="member-name">Ainun Aisiyah</h3><p class="member-role">Sie Tik</p></div></article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestasi - Dewan Ambalan Gamaska</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: #fff8e9; font-family: Arial, sans-serif; background: #102b20 url("WhatsApp Image 2026-08-22 at 19.47.26.jpeg") center / cover fixed; }
+    .page { display: grid; min-height: 100vh; place-items: center; padding: 24px; background: rgba(8, 29, 19, .68); }
+    .box { width: min(1200px, 100%); padding: clamp(28px, 5vw, 56px); border: 1px solid rgba(255, 248, 233, .7); text-align: center; }
+    h1 { margin: 0 0 12px; font-size: clamp(42px, 7vw, 76px); letter-spacing: .05em; }
+    .intro { margin: 0 auto 32px; max-width: 520px; font-size: 18px; line-height: 1.6; }
+    .achievements { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-bottom: 36px; text-align: left; }
+    .achievement { display: flex; min-width: 0; flex-direction: column; border: 1px solid rgba(255, 248, 233, .45); background: rgba(8, 29, 19, .5); }
+    .photo-space { display: grid; aspect-ratio: 4 / 3; place-items: center; overflow: hidden; border-bottom: 1px solid rgba(255, 248, 233, .35); background: rgba(0, 0, 0, .35); }
+    .photo-space img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; }
+    .photo-space.empty { padding: 16px; color: rgba(255, 248, 233, .72); font-size: 13px; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
+    .achievement-content { padding: 18px; }
+    .achievement-number { margin: 0 0 10px; color: #f5c542; font-size: 13px; font-weight: 700; letter-spacing: .12em; }
+    .achievement h2 { margin: 0; font-size: clamp(18px, 2vw, 24px); line-height: 1.25; }
+    a { color: #f5c542; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+    @media (max-width: 800px) { .achievements { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 480px) { .achievements { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="box">
+      <h1>PRESTASI</h1>
+      <p class="intro">Catatan pencapaian dan karya Dewan Ambalan Gamaska 2026.</p>
+      <div class="achievements">
+        <article class="achievement">
+          <div class="photo-space"><img src="1.png" alt="Penerima Eagle Scout Award"></div>
+          <div class="achievement-content">
+            <p class="achievement-number">01</p>
+            <h2>Tergiat 2 Putri Dan 3 Putra Eagle Scout Award</h2>
+          </div>
+        </article>
+        <article class="achievement">
+          <div class="photo-space"><img src="2.png" alt="Juara Harapan 1 LCTP"></div>
+          <div class="achievement-content">
+            <p class="achievement-number">02</p>
+            <h2>Juara Harapan 1 LCTP Kwarcab Pekalongan</h2>
+          </div>
+        </article>
+        <article class="achievement">
+          <div class="photo-space"><img src="3.png" alt="Juara 3 Vidio Profil Raimuna Cabang Pekalongan 2026"></div>
+          <div class="achievement-content">
+            <p class="achievement-number">03</p>
+            <h2>Juara 3 Vidio Profil Raimuna Cabang Pekalongan 2026</h2>
+          </div>
+        </article>
+        <article class="achievement">
+          <div class="photo-space"><img src="4.png" alt="Juara 2 K3 Putri Raimuna Cabang Pekalongan 2026"></div>
+          <div class="achievement-content">
+            <p class="achievement-number">04</p>
+            <h2>Juara 2 K3 Putri Raimuna Cabang Pekalongan 2026</h2>
+          </div>
+        </article>
+      </div>
+      <a href="menu.html">Kembali ke menu</a>
+    </section>
+  </main>
+</body>
+</html>

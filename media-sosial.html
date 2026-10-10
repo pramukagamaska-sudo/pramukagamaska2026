@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Sosial - Dewan Ambalan Gamaska</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: #fff8e9; font-family: Arial, sans-serif; background: #102b20 url("WhatsApp Image 2026-08-22 at 19.47.26.jpeg") center / cover fixed; }
+    .page { display: grid; min-height: 100vh; place-items: center; padding: 24px; background: rgba(8, 29, 19, .68); }
+    .box { width: min(760px, 100%); padding: clamp(30px, 7vw, 80px); border: 1px solid rgba(255, 248, 233, .7); text-align: center; }
+    h1 { margin: 0 0 24px; font-size: clamp(42px, 9vw, 90px); letter-spacing: .05em; }
+    p { margin: 0 auto 36px; max-width: 520px; font-size: 18px; line-height: 1.6; }
+    .social-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 auto 36px; max-width: 560px; }
+    .social-link { display: grid; min-height: 72px; place-items: center; border: 1px solid rgba(245, 197, 66, .75); background: rgba(8, 29, 19, .45); transition: background .2s, color .2s; }
+    .social-link:hover, .social-link:focus-visible { background: #f5c542; color: #102b20; }
+    a { color: #f5c542; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+    @media (max-width: 480px) { .social-links { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="box">
+      <h1>MEDIA SOSIAL</h1>
+      <p>Ikuti kabar dan kegiatan terbaru Dewan Ambalan Gamaska 2026.</p>
+      <nav class="social-links" aria-label="Media sosial">
+        <a class="social-link" href="https://www.instagram.com/pramuka_smandor/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="social-link" href="https://www.tiktok.com/@pramukasmandor?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </nav>
+      <a href="menu.html">Kembali ke menu</a>
+    </section>
+  </main>
+</body>
+</html>
